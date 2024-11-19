@@ -4,6 +4,7 @@ import Home from "../components/Pages/Home";
 import Error from "../components/Error";
 import Tutorials from "../components/Pages/Tutorials";
 import Learning from "../components/Pages/Learning";
+import LessonDetails from "../components/Pages/LessonDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/tutorials",
         element: <Tutorials></Tutorials>,
+      },
+      {
+        path: "/learning/:lesson_no",
+        element: <LessonDetails></LessonDetails>,
+        loader: () => fetch("../german_vocab.json"),
       },
     ],
   },
