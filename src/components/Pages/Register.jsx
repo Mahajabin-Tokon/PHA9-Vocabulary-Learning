@@ -27,6 +27,7 @@ const Register = () => {
 
     handleRegister(email, password)
       .then((result) => {
+        console.log(result)
         manageProfile(name, image)
       })
       .catch((error) => {

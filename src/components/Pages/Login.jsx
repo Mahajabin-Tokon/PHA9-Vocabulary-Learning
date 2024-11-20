@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { handleLogin, handleGoogleLogin, handleLogout } =
+  const { handleLogin, handleGoogleLogin } =
     useContext(authContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -15,6 +15,7 @@ const Login = () => {
     handleLogin(email, password)
       .then((result) => {
         navigate(location.state.from);
+      
       })
       .catch((error) => {
         setError("Invalid Credentials");
@@ -85,9 +86,6 @@ const Login = () => {
           </button>
         </div>
       </form>
-      <button onClick={handleLogout} className="btn">
-        Logout
-      </button>
     </>
   );
 };

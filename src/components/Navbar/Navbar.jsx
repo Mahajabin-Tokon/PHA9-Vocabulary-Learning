@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaBookOpen } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { authContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, handleLogout } = useContext(authContext);
   const navlinks = (
     <>
       <li>
@@ -56,10 +58,21 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
-      <div className="navbar-end gap-4">
-        <p>Welcome User</p>
-        <Link to="/login" className="btn">Login</Link>
-      </div>
+      {user?.email ? (
+        <div className="navbar-end gap-4">
+          
+          <p>Welcome {user?.displayName}</p>
+          <Link onClick={handleLogout} to="/login" className="btn">
+            Logout
+          </Link>
+        </div>
+      ) : (
+        <div className="navbar-end gap-4">
+          <Link to="/login" className="btn">
+            Login
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
