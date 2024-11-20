@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { handleRegister, handleGoogleLogin } = useContext(authContext);
+  const { handleRegister, handleGoogleLogin, manageProfile } =
+    useContext(authContext);
   const [error, setError] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,8 +24,14 @@ const Register = () => {
       setError("Password must contain atleast 1 uppercase letter");
       return;
     }
-    
-    handleRegister(email, password);
+
+    handleRegister(email, password)
+      .then((result) => {
+        manageProfile(name, image)
+      })
+      .catch((error) => {
+        console.log(error)
+      });
   };
   return (
     <form

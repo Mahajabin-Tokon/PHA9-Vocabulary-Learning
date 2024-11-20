@@ -9,6 +9,7 @@ import Profile from "../components/Pages/Profile";
 import Register from "../components/Pages/Register";
 import Login from "../components/Pages/Login";
 import AboutUs from "../components/Pages/AboutUs";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/register",
