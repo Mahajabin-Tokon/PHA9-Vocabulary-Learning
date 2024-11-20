@@ -15,7 +15,7 @@ const LessonDetailsCard = ({ vocabulary }) => {
 //   Word, meaning, pronunciation, part_of_speech
 
   return (
-    <div className={`flex flex-col justify-center items-start border-2 p-5 font-semibold gap-2 ${difficulty==="easy"?"bg-green-200":""} ${difficulty==="medium"?"bg-orange-200":""} ${difficulty==="difficult"?"bg-red-200":""}`}>
+    <div className={`flex flex-col justify-center items-start border-2 p-5 font-semibold gap-2 ${difficulty==="easy"?"bg-green-200":""} ${difficulty==="medium"?"bg-orange-200":""} ${difficulty==="difficulty"?"bg-red-200":""}`}>
       <p className="">Word: {word}</p>
       <p className="">Meaning: {meaning}</p>
       <p className="">Pronunciation: {pronunciation}</p>

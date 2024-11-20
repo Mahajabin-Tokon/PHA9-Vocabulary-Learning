@@ -93,7 +93,7 @@
     "pronunciation": "froint",
     "meaning": "friend",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 5,
     "when_to_say": "Talking about relationships",
     "example": "Er ist mein Freund. (He is my friend.)"
@@ -148,7 +148,7 @@
     "pronunciation": "klayn",
     "meaning": "small",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 7,
     "when_to_say": "Describing size",
     "example": "Das ist ein kleines Haus. (That is a small house.)"
@@ -181,7 +181,7 @@
     "pronunciation": "hoy-te",
     "meaning": "today",
     "part_of_speech": "adverb",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 9,
     "when_to_say": "Referring to the current day",
     "example": "Heute ist ein schöner Tag. (Today is a beautiful day.)"
@@ -236,7 +236,7 @@
     "pronunciation": "ar-bye-ten",
     "meaning": "to work",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 1,
     "when_to_say": "Discussing jobs or tasks",
     "example": "Ich arbeite im Büro. (I work in the office.)"
@@ -357,7 +357,7 @@
     "pronunciation": "shvair",
     "meaning": "heavy",
     "part_of_speech": "adjective",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 7,
     "when_to_say": "Describing weight or difficulty",
     "example": "Der Koffer ist schwer. (The suitcase is heavy.)"
@@ -500,7 +500,7 @@
     "pronunciation": "zing-en",
     "meaning": "to sing",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "difficultydifficulty",
     "lesson_no": 3,
     "when_to_say": "Talking about music or entertainment",
     "example": "Er singt ein Lied. (He is singing a song.)"
@@ -544,7 +544,7 @@
     "pronunciation": "yoong",
     "meaning": "young",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 5,
     "when_to_say": "Describing age or freshness",
     "example": "Das Kind ist jung. (The child is young.)"
@@ -610,7 +610,7 @@
     "pronunciation": "velt",
     "meaning": "world",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 8,
     "when_to_say": "Talking about geography or global topics",
     "example": "Die Welt ist groß. (The world is big.)"
@@ -720,7 +720,7 @@
     "pronunciation": "fen-ster",
     "meaning": "window",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 2,
     "when_to_say": "Talking about parts of a building",
     "example": "Das Fenster ist offen. (The window is open.)"
@@ -764,7 +764,7 @@
     "pronunciation": "shry-ben",
     "meaning": "to write",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 4,
     "when_to_say": "Talking about writing tasks",
     "example": "Ich schreibe einen Brief. (I write a letter.)"
@@ -797,7 +797,7 @@
     "pronunciation": "broht",
     "meaning": "bread",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 6,
     "when_to_say": "Talking about food",
     "example": "Ich esse Brot. (I eat bread.)"
@@ -863,7 +863,7 @@
     "pronunciation": "klayn",
     "meaning": "small",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 9,
     "when_to_say": "Describing size",
     "example": "Der Hund ist klein. (The dog is small.)"
@@ -907,7 +907,7 @@
     "pronunciation": "klide",
     "meaning": "dress",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 3,
     "when_to_say": "Talking about clothing",
     "example": "Das Kleid ist schön. (The dress is beautiful.)"
@@ -995,7 +995,7 @@
     "pronunciation": "bren-nen",
     "meaning": "to burn",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 4,
     "when_to_say": "Talking about heat or fire",
     "example": "Das Feuer brennt stark. (The fire burns strongly.)"
@@ -1072,7 +1072,7 @@
     "pronunciation": "vahm",
     "meaning": "warm",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 8,
     "when_to_say": "Describing weather or temperature",
     "example": "Das Wetter ist warm. (The weather is warm.)"
@@ -1204,7 +1204,7 @@
     "pronunciation": "zoh-neh",
     "meaning": "sun",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 4,
     "when_to_say": "Talking about the weather",
     "example": "Die Sonne scheint. (The sun is shining.)"
@@ -1259,7 +1259,7 @@
     "pronunciation": "doon-kel",
     "meaning": "dark",
     "part_of_speech": "adjective",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 6,
     "when_to_say": "Describing lighting or colors",
     "example": "Das Zimmer ist dunkel. (The room is dark.)"
@@ -1391,7 +1391,7 @@
     "pronunciation": "tsoo-ker",
     "meaning": "sugar",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 2,
     "when_to_say": "Talking about food ingredients",
     "example": "Ich brauche Zucker für den Kuchen. (I need sugar for the cake.)"
@@ -1578,7 +1578,7 @@
     "pronunciation": "ant-vort",
     "meaning": "answer",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 2,
     "when_to_say": "Talking about responses",
     "example": "Ich habe eine Antwort. (I have an answer.)"
@@ -1710,7 +1710,7 @@
     "pronunciation": "berg",
     "meaning": "mountain",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 8,
     "when_to_say": "Talking about geography",
     "example": "Der Berg ist hoch. (The mountain is tall.)"
@@ -2018,7 +2018,7 @@
     "pronunciation": "bloo-meh",
     "meaning": "flower",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 2,
     "when_to_say": "Talking about plants",
     "example": "Die Blume ist schön. (The flower is beautiful.)"
@@ -2062,7 +2062,7 @@
     "pronunciation": "vet-ter",
     "meaning": "weather",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 4,
     "when_to_say": "Talking about the climate",
     "example": "Das Wetter ist schön. (The weather is nice.)"
@@ -2084,7 +2084,7 @@
     "pronunciation": "oor",
     "meaning": "clock",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 5,
     "when_to_say": "Talking about time",
     "example": "Die Uhr zeigt fünf Uhr. (The clock shows five o'clock.)"
@@ -2106,7 +2106,7 @@
     "pronunciation": "tah-seh",
     "meaning": "cup",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 6,
     "when_to_say": "Talking about drinks or utensils",
     "example": "Die Tasse ist leer. (The cup is empty.)"
@@ -2128,7 +2128,7 @@
     "pronunciation": "bahn",
     "meaning": "train",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 7,
     "when_to_say": "Talking about transportation",
     "example": "Ich nehme die Bahn. (I take the train.)"
@@ -2150,7 +2150,7 @@
     "pronunciation": "shoo-he",
     "meaning": "shoes",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 8,
     "when_to_say": "Talking about clothing",
     "example": "Die Schuhe sind neu. (The shoes are new.)"
@@ -2172,7 +2172,7 @@
     "pronunciation": "book-lah-den",
     "meaning": "bookstore",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 9,
     "when_to_say": "Talking about shopping for books",
     "example": "Ich kaufe Bücher im Buchladen. (I buy books in the bookstore.)"
@@ -2183,7 +2183,7 @@
     "pronunciation": "shnay",
     "meaning": "snow",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 10,
     "when_to_say": "Talking about winter weather",
     "example": "Der Schnee ist weiß. (The snow is white.)"
@@ -2205,7 +2205,7 @@
     "pronunciation": "hen-dee",
     "meaning": "mobile phone",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "difficulty",
     "lesson_no": 1,
     "when_to_say": "Talking about communication",
     "example": "Ich habe mein Handy vergessen. (I forgot my mobile phone.)"
@@ -2238,7 +2238,7 @@
     "pronunciation": "tish-deck-eh",
     "meaning": "tablecloth",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 3,
     "when_to_say": "Talking about dining items",
     "example": "Die Tischdecke ist sauber. (The tablecloth is clean.)"
@@ -2249,7 +2249,7 @@
     "pronunciation": "fahr-kar-teh",
     "meaning": "ticket",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "difficulty",
     "lesson_no": 4,
     "when_to_say": "Talking about travel or transportation",
     "example": "Ich brauche eine Fahrkarte. (I need a ticket.)"
