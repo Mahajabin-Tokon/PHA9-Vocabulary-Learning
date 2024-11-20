@@ -1,17 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { handleRegister } = useContext(authContext);
+  const { handleRegister, handleGoogleLogin } = useContext(authContext);
+  const [error, setError] = useState("");
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const name = event.target.name.value
-    const email = event.target.email.value
-    const image = event.target.image.value
-    const password = event.target.password.value
-    console.log(name, email, image, password)
-    handleRegister(email,password)
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const image = event.target.image.value;
+    const password = event.target.password.value;
+    if (password.length < 6) {
+      setError("Password must contain atleast 6 characters");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setError("Password must contain atleast 1 lowercase letter");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setError("Password must contain atleast 1 uppercase letter");
+      return;
+    }
+    
+    handleRegister(email, password);
   };
   return (
     <form
@@ -71,14 +84,18 @@ const Register = () => {
             Login
           </Link>
         </div>
+        <div>{error && <p className="text-xs text-red-600">{error}</p>}</div>
       </div>
+
       <div className="text-center my-5">
         <button type="submit" className="btn font-bold w-1/4">
           Register
         </button>
       </div>
       <div className="text-center my-5">
-        <button className="btn font-bold w-1/4">Login via Google</button>
+        <button onClick={handleGoogleLogin} className="btn font-bold w-1/4">
+          Login via Google
+        </button>
       </div>
     </form>
   );

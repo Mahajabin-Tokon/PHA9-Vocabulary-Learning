@@ -3,9 +3,15 @@ import { Link } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { handleGoogleLogin } = useContext(authContext);
+  const { handleLogin, handleGoogleLogin, handleLogout } = useContext(authContext);
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const email = event.target.email.value
+    const password = event.target.password.value
+    handleLogin(email,password)
+  };
   return (
-    <form className="max-w-6xl mx-auto my-2 px-2">
+    <form onSubmit={handleSubmit} className="max-w-6xl mx-auto my-2 px-2">
       <div className="flex flex-col justify-center items-center gap-4 p-5 m-5">
         <div className="text-center text-4xl">Login</div>
 
@@ -45,13 +51,14 @@ const Login = () => {
       </div>
 
       <div className="text-center my-5">
-        <button className="btn font-bold w-1/4">Login</button>
+        <button type="submit" className="btn font-bold w-1/4">Login</button>
       </div>
       <div className="text-center my-5">
         <button onClick={handleGoogleLogin} className="btn font-bold w-1/4">
           Login via Google
         </button>
       </div>
+      <button onClick={handleLogout} className="btn">Logout</button>
     </form>
   );
 };
