@@ -1,19 +1,32 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
   const { handleLogin, handleGoogleLogin, handleLogout } =
     useContext(authContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const [error, setError] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
     handleLogin(email, password)
-      .then((result) => {})
+      .then((result) => {
+        navigate(location.state.from);
+      })
       .catch((error) => {
-        console.log(error);
+        setError("Invalid Credentials");
+      });
+  };
+
+  const googleLogin = () => {
+    handleGoogleLogin()
+      .then((result) => {
+        navigate(location.state.from);
+      })
+      .catch((error) => {
         setError("Invalid Credentials");
       });
   };
@@ -32,7 +45,6 @@ const Login = () => {
               type="email"
               placeholder="Email"
               className="input input-bordered w-full max-w-xs"
-              required
             />
           </label>
 
@@ -68,7 +80,7 @@ const Login = () => {
           </button>
         </div>
         <div className="text-center my-5">
-          <button onClick={handleGoogleLogin} className="btn font-bold w-1/4">
+          <button onClick={googleLogin} className="btn font-bold w-1/4">
             Login via Google
           </button>
         </div>
