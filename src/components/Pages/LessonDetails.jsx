@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import LessonDetailsCard from "../LessonDetailsCard";
+import Modal from "../Modal";
 
 const LessonDetails = () => {
   const lessonNumFromURL = useParams();
   const data = useLoaderData();
   const [vocabs, setVocabs] = useState([]);
-
+  const [modalInfo, setModalInfo] = useState({});
+  
   useEffect(() => {
     const vocabInLesson = [...data].filter(
       (eachVocab) =>
@@ -14,6 +16,24 @@ const LessonDetails = () => {
     );
     setVocabs(vocabInLesson);
   }, [data, lessonNumFromURL]);
+
+  const whenToSay = (wordId) => {
+    const clickedVocab = vocabs.find(
+      (eachVocabulary) => eachVocabulary.id === wordId
+    );
+    setModalInfo(clickedVocab);
+    document.getElementById("my_modal_1").showModal();
+  };
+
+  const pronounceWord = (wordId) => {
+    const clickedVocab = vocabs.find(
+      (eachVocabulary) => eachVocabulary.id === wordId
+    );
+
+    const utterance = new SpeechSynthesisUtterance(clickedVocab.word);
+    utterance.lang = "de-DE";
+    window.speechSynthesis.speak(utterance);
+  };
 
   return (
     <div className="max-w-6xl mx-auto my-10 px-2">
@@ -27,12 +47,17 @@ const LessonDetails = () => {
           <LessonDetailsCard
             key={eachVocabulary.id}
             vocabulary={eachVocabulary}
+            whenToSay={whenToSay}
+            pronounceWord={pronounceWord}
           ></LessonDetailsCard>
         ))}
       </div>
       <div className="text-center my-10">
-        <Link to="/learning" className="btn w-full font-bold">Back to Lesson</Link>
+        <Link to="/learning" className="btn w-full font-bold">
+          Back to Lesson
+        </Link>
       </div>
+      <Modal modalInfo={modalInfo}></Modal>
     </div>
   );
 };
