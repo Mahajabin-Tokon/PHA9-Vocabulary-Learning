@@ -19,9 +19,11 @@ const Navbar = () => {
       <li>
         <NavLink to="/about">About Us</NavLink>
       </li>
-      <li>
-        <NavLink to="/profile">Profile</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to="/profile">Profile</NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -60,7 +62,6 @@ const Navbar = () => {
       </div>
       {user?.email ? (
         <div className="navbar-end gap-4">
-          
           <p>Welcome {user?.displayName}</p>
           <Link onClick={handleLogout} to="/login" className="btn">
             Logout

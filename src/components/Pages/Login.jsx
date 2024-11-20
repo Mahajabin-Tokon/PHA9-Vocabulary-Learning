@@ -3,7 +3,8 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { handleLogin, handleGoogleLogin, setEmailReference } = useContext(authContext);
+  const { handleLogin, handleGoogleLogin, setEmailReference} =
+    useContext(authContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
@@ -21,7 +22,9 @@ const Login = () => {
           navigate(location.state.from);
         }
       })
-      .catch((error) => {});
+      .catch((error) => {
+        setError("Invalid credentials");
+      });
   };
 
   const googleLogin = () => {
@@ -33,12 +36,14 @@ const Login = () => {
           navigate(location.state.from);
         }
       })
-      .catch((error) => {});
+      .catch((error) => {
+        setError("Invalid credentials");
+      });
   };
 
   const handleForgetPassword = () => {
-    navigate("/forgetpassword")
-    setEmailReference(emailRef.current.value)
+    navigate("/forgetpassword");
+    setEmailReference(emailRef.current.value);
   };
   return (
     <>

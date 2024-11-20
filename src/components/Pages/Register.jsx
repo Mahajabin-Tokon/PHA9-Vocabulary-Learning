@@ -13,7 +13,11 @@ const Register = () => {
     const email = event.target.email.value;
     const image = event.target.image.value;
     const password = event.target.password.value;
-    if (password.length < 6) {
+    if (name.length == 0 || email.length == 0 || image.length == 0 || password.length == 0) {
+      setError("Please fill out all fields");
+      return;
+    }
+    if (password.length < 6 || password.length == 0) {
       setError("Password must contain atleast 6 characters");
       return;
     }
