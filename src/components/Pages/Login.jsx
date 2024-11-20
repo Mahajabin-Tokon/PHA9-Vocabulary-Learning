@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { handleGoogleLogin } = useContext(authContext);
   return (
-    <div className="max-w-6xl mx-auto my-2 px-2">
+    <form className="max-w-6xl mx-auto my-2 px-2">
       <div className="flex flex-col justify-center items-center gap-4 p-5 m-5">
         <div className="text-center text-4xl">Login</div>
 
@@ -46,9 +48,11 @@ const Login = () => {
         <button className="btn font-bold w-1/4">Login</button>
       </div>
       <div className="text-center my-5">
-        <button className="btn font-bold w-1/4">Login via Google</button>
+        <button onClick={handleGoogleLogin} className="btn font-bold w-1/4">
+          Login via Google
+        </button>
       </div>
-    </div>
+    </form>
   );
 };
 

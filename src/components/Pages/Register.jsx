@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { handleRegister } = useContext(authContext);
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const name = event.target.name.value
+    const email = event.target.email.value
+    const image = event.target.image.value
+    const password = event.target.password.value
+    console.log(name, email, image, password)
+    handleRegister(email,password)
+  };
   return (
-    <div className="max-w-6xl mx-auto my-2 px-2">
+    <form
+      action=""
+      onSubmit={handleSubmit}
+      className="max-w-6xl mx-auto my-2 px-2"
+    >
       <div className="flex flex-col justify-center items-center gap-4 p-5 m-5">
         <div className="text-center text-4xl">Register</div>
         <label className="form-control w-full max-w-xs">
@@ -33,9 +48,9 @@ const Register = () => {
             <span className="label-text">Photo URL</span>
           </div>
           <input
-            name="photo"
+            name="image"
             type="text"
-            placeholder="Phot URL"
+            placeholder="Photo URL"
             className="input input-bordered w-full max-w-xs"
           />
         </label>
@@ -58,12 +73,14 @@ const Register = () => {
         </div>
       </div>
       <div className="text-center my-5">
-        <button className="btn font-bold w-1/4">Register</button>
+        <button type="submit" className="btn font-bold w-1/4">
+          Register
+        </button>
       </div>
       <div className="text-center my-5">
         <button className="btn font-bold w-1/4">Login via Google</button>
       </div>
-    </div>
+    </form>
   );
 };
 
