@@ -8,6 +8,7 @@ import LessonDetails from "../components/Pages/LessonDetails";
 import Profile from "../components/Pages/Profile";
 import Register from "../components/Pages/Register";
 import Login from "../components/Pages/Login";
+import AboutUs from "../components/Pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/tutorials",
         element: <Tutorials></Tutorials>,
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>,
       },
       {
         path: "/learning/:lesson_no",
