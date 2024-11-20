@@ -1,16 +1,8 @@
 import React from "react";
 
 const LessonDetailsCard = ({ whenToSay, vocabulary, pronounceWord }) => {
-  const {
-    id,
-    word,
-    pronunciation,
-    meaning,
-    part_of_speech,
-    difficulty,
-  } = vocabulary;
-
-  
+  const { id, word, pronunciation, meaning, part_of_speech, difficulty } =
+    vocabulary;
 
   return (
     <div

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBookOpen } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navlinks = (
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-4">
         <p>Welcome User</p>
-        <a className="btn">Login</a>
+        <Link to="/login" className="btn">Login</Link>
       </div>
     </div>
   );

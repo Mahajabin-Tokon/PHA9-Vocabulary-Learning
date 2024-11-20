@@ -8,7 +8,7 @@ const LessonDetails = () => {
   const data = useLoaderData();
   const [vocabs, setVocabs] = useState([]);
   const [modalInfo, setModalInfo] = useState({});
-  
+
   useEffect(() => {
     const vocabInLesson = [...data].filter(
       (eachVocab) =>
