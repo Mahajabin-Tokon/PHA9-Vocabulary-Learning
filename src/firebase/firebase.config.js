@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBPoBNx0ObRyc74vtwfJ2r0GUbi6raGuUs",
-  authDomain: "vocab-learning-a0e56.firebaseapp.com",
-  projectId: "vocab-learning-a0e56",
-  storageBucket: "vocab-learning-a0e56.firebasestorage.app",
-  messagingSenderId: "1045395403743",
-  appId: "1:1045395403743:web:5f872c1a8673bda2408a6a",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
