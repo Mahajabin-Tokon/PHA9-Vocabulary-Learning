@@ -1,35 +1,44 @@
-import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useContext, useRef, useState } from "react";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { handleLogin, handleGoogleLogin } =
-    useContext(authContext);
+  const { handleLogin, handleGoogleLogin, setEmailReference } = useContext(authContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
+  const emailRef = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
+    // console.log(location.state);
     handleLogin(email, password)
       .then((result) => {
-        navigate(location.state.from);
-      
+        if (!location.state) {
+          navigate("/");
+        } else {
+          navigate(location.state.from);
+        }
       })
-      .catch((error) => {
-        setError("Invalid Credentials");
-      });
+      .catch((error) => {});
   };
 
   const googleLogin = () => {
     handleGoogleLogin()
       .then((result) => {
-        navigate(location.state.from);
+        if (!location.state) {
+          navigate("/");
+        } else {
+          navigate(location.state.from);
+        }
       })
-      .catch((error) => {
-        setError("Invalid Credentials");
-      });
+      .catch((error) => {});
+  };
+
+  const handleForgetPassword = () => {
+    navigate("/forgetpassword")
+    setEmailReference(emailRef.current.value)
   };
   return (
     <>
@@ -43,6 +52,7 @@ const Login = () => {
             </div>
             <input
               name="email"
+              ref={emailRef}
               type="email"
               placeholder="Email"
               className="input input-bordered w-full max-w-xs"
@@ -61,7 +71,10 @@ const Login = () => {
             />
             <div className="label">
               <span className="label-text-alt">
-                Forgot Password? Click Here
+                Forgot Password? Click{" "}
+                <button onClick={handleForgetPassword} className="text-red-600">
+                  Here
+                </button>
               </span>
             </div>
           </label>

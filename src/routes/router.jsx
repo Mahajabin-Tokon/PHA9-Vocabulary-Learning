@@ -10,6 +10,8 @@ import Register from "../components/Pages/Register";
 import Login from "../components/Pages/Login";
 import AboutUs from "../components/Pages/AboutUs";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import Update from "../components/Pages/Update";
+import ForgetPassword from "../components/Pages/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element: (
+          <PrivateRoute>
+            <Tutorials></Tutorials>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/about",
@@ -35,7 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/learning/:lesson_no",
-        element: <LessonDetails></LessonDetails>,
+        element: (
+          <PrivateRoute>
+            <LessonDetails></LessonDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("../german_vocab.json"),
       },
       {
@@ -53,6 +63,14 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/update",
+        element: <Update></Update>,
+      },
+      {
+        path: "/forgetpassword",
+        element: <ForgetPassword></ForgetPassword>,
       },
     ],
   },

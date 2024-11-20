@@ -14,6 +14,7 @@ export const authContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [emailReference, setEmailReference] = useState("");
   const provider = new GoogleAuthProvider();
   const handleRegister = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -25,7 +26,7 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, provider);
   };
   const manageProfile = (name, image) => {
-    updateProfile(auth.currentUser, {
+    return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
     });
@@ -38,10 +39,11 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
+        console.log(currentUser);
       } else {
         setUser(null);
       }
-      setLoading(false)
+      setLoading(false);
       return () => {
         unsubscribe();
       };
@@ -57,6 +59,8 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     setUser,
+    emailReference,
+    setEmailReference,
   };
 
   return (
