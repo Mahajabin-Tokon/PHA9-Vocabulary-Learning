@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { authContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase/firebase.config";
 
 const Update = () => {
   const { manageProfile } = useContext(authContext);
@@ -12,6 +13,7 @@ const Update = () => {
     manageProfile(name, image)
       .then((result) => {
         navigate("/profile");
+        window.location.reload();
       })
       .catch((error) => {
        

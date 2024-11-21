@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { FaBookOpen } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
+import auth from "../../firebase/firebase.config";
 
 const Navbar = () => {
   const { user, handleLogout } = useContext(authContext);
+  // const userFromFirebase = auth.currentUser
   const navlinks = (
     <>
       <li>

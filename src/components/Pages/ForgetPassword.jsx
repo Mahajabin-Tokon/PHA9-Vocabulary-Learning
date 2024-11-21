@@ -10,13 +10,28 @@ const ForgetPassword = () => {
   console.log(emailReference);
   const handleSubmit = (event) => {
     event.preventDefault();
-    sendPasswordResetEmail(auth, emailReference)
-      .then(() => {
-        navigate(
-          "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgcIARAAGI8CMgcIAhAAGI8CMgYIAxBFGD3SAQgxMTE5ajBqMagCALACAA&sourceid=chrome&ie=UTF-8"
-        );
-      })
-      .catch((error) => {});
+    const emailForReset = event.target.email.value;
+    if (emailReference) {
+      sendPasswordResetEmail(auth, emailReference)
+        .then(() => {
+          window.location.href =
+            "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
+          navigate(window.location.href);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      sendPasswordResetEmail(auth, emailForReset)
+        .then(() => {
+          window.location.href =
+            "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
+          navigate(window.location.href);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
   return (
     <>
@@ -26,7 +41,7 @@ const ForgetPassword = () => {
 
           <label className="form-control w-full max-w-xs">
             <div className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Email</span>
             </div>
             {emailReference ? (
               <input
