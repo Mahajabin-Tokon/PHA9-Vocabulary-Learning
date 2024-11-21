@@ -107,12 +107,12 @@ const Login = () => {
             Login
           </button>
         </div>
-        <div className="text-center my-5">
-          <button onClick={googleLogin} className="btn font-bold w-1/4">
-            Login via Google
-          </button>
-        </div>
       </form>
+      <div className="text-center my-5 max-w-6xl mx-auto px-2">
+        <button onClick={googleLogin} className="btn font-bold w-1/4">
+          Login via Google
+        </button>
+      </div>
     </>
   );
 };
