@@ -3,7 +3,7 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { handleLogin, handleGoogleLogin, setEmailReference} =
+  const { handleLogin, handleGoogleLogin, setEmailReference, loading } =
     useContext(authContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,6 +24,15 @@ const Login = () => {
       })
       .catch((error) => {
         setError("Invalid credentials");
+        // if (loading) {
+        //   return (
+        //     <div className="text-center mt-32">
+        //       <span className="loading loading-spinner loading-lg"></span>
+        //     </div>
+        //   );
+        // } else {
+        //   setError("Invalid credentials");
+        // }
       });
   };
 
