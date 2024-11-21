@@ -13,9 +13,10 @@ const ForgetPassword = () => {
     if (emailReference) {
       resetPass(emailReference)
         .then(() => {
-          window.location.href =
-            "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
-          navigate(window.location.href);
+          document.getElementById("glink").click()
+          // window.location.href =
+          //   "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
+          // navigate(window.location.href);
         })
         .catch((error) => {
           console.log(error);
@@ -23,9 +24,10 @@ const ForgetPassword = () => {
     } else {
       resetPass(emailForReset)
         .then(() => {
-          window.location.href =
-            "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
-          navigate(window.location.href);
+          document.getElementById("glink").click()
+          // window.location.href =
+          //   "https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
+          // navigate(window.location.href);
         })
         .catch((error) => {
           console.log(error);
@@ -61,11 +63,13 @@ const ForgetPassword = () => {
           </label>
         </div>
         <div className="text-center my-5">
+          
           <button type="submit" className="btn font-bold w-60">
             Reset Password
           </button>
         </div>
       </form>
+      <a id="glink" className="hidden" href="https://www.google.com/search?q=gmail&rlz=1C5CHFA_enCA929CA929&oq=gmail&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyEggDEAAYQxiDARixAxiABBiKBTINCAQQABixAxiABBiKBTIKCAUQABixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg90gEIMTI3OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"></a>
     </>
   );
 };
