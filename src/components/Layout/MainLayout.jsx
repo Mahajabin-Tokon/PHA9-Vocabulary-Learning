@@ -5,9 +5,9 @@ import Footer from "../Footer";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-cyan-200 to-blue-500">
       <Navbar></Navbar>
-      <div className="min-h-[calc(100vh-295px)]">
+      <div className="min-h-[calc(100vh-295px)] ">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

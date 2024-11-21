@@ -6,9 +6,10 @@ import Feedback from "../Feedback";
 import Price from "../Price";
 import 'animate.css';
 
+
 const Home = () => {
   return (
-    <div>
+    <div >
       <div className="max-w-6xl mx-auto my-2 px-2 animate__animated animate__fadeInLeft">
         <Banner></Banner>
       </div>

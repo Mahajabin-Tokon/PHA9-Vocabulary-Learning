@@ -6,6 +6,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
   updateProfile,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import auth from "../../firebase/firebase.config";
@@ -30,6 +31,9 @@ const AuthProvider = ({ children }) => {
       displayName: name,
       photoURL: image,
     });
+  };
+  const resetPass = (givenEmail) => {
+    return sendPasswordResetEmail(auth, givenEmail);
   };
   const handleLogout = () => {
     return signOut(auth);
@@ -61,6 +65,7 @@ const AuthProvider = ({ children }) => {
     setUser,
     emailReference,
     setEmailReference,
+    resetPass,
   };
 
   return (

@@ -3,7 +3,6 @@ import bp1 from "../assets/bp1.png"
 import bp2 from "../assets/bp2.png"
 import bp3 from "../assets/bp3.png"
 
-
 const Banner = () => {
   return (
     <div className="carousel w-full">
