@@ -66,11 +66,4 @@ The German Vocabulary Learning Platform is a modern, responsive web application 
 3. **Advanced Vocabulary Search**:
    - Implement a search feature to allow users to find words, phrases, or lessons based on their difficulty level or part of speech.
 
-## Getting Started
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
